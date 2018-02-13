@@ -23,7 +23,7 @@
 
 #include "PreCompiled.h"
 #ifndef _PreComp_
-# include <Python.h>
+#include <Python.h>
 #endif
 
 #include <Base/Console.h>
@@ -39,12 +39,19 @@ class Module : public Py::ExtensionModule<Module>
 public:
     Module() : Py::ExtensionModule<Module>("QuickPreview")
     {
-        initialize("This module is the QuickPreview module."); // register with Python
+		add_varargs_method("sayHello", &Module::sayHello
+			);
+		initialize("This module is the QuickPreview module."); // register with Python
     }
 
     virtual ~Module() {}
 
 private:
+	Py::Object sayHello(const Py::Tuple& args)
+	{
+		Base::Console().Message("Hello, World!");
+		return Py::None();
+	}
 };
 
 PyObject* initModule()

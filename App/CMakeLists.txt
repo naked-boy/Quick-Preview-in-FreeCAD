@@ -20,10 +20,13 @@ SET(QuickPreview_SRCS
 add_library(QuickPreview SHARED ${QuickPreview_SRCS})
 target_link_libraries(QuickPreview ${QuickPreview_LIBS})
 
+message("${CMAKE_SOURCE_DIR}")
+message("${CMAKE_BINARY_DIR}/src/Mod/QuickPreview")
 
+#/src/Mod/QuickPreview
 fc_target_copy_resource(QuickPreview 
-    ${CMAKE_SOURCE_DIR}/src/Mod/QuickPreview
-    ${CMAKE_BINARY_DIR}/Mod/QuickPreview
+    ${CMAKE_SOURCE_DIR}
+    ${CMAKE_BINARY_DIR}/src/Mod/QuickPreview
     Init.py)
 
 SET_BIN_DIR(QuickPreview QuickPreview /Mod/QuickPreview)

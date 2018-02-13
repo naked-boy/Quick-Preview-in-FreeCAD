@@ -32,10 +32,10 @@ SET(QuickPreviewGui_SRCS
 
 add_library(QuickPreviewGui SHARED ${QuickPreviewGui_SRCS})
 target_link_libraries(QuickPreviewGui ${QuickPreviewGui_LIBS})
-
+#/src/Mod/QuickPreview
 fc_target_copy_resource(QuickPreviewGui 
-    ${CMAKE_SOURCE_DIR}/src/Mod/QuickPreview
-    ${CMAKE_BINARY_DIR}/Mod/QuickPreview
+    ${CMAKE_SOURCE_DIR}
+    ${CMAKE_BINARY_DIR}/src/Mod/QuickPreview
     InitGui.py)
 
 SET_BIN_DIR(QuickPreviewGui QuickPreviewGui /Mod/QuickPreview)
