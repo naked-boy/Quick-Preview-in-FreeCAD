@@ -11,5 +11,5 @@ However, programming with OpenGL is a very tedious thing. How to simplify and ge
 - FreeCAD reads STEP file slowly, but geometries are selectable and measurable.
 - FreeCAD reads IGES file slowly, but geometries are selectable and measurable.
 
-##_Questions_
+- Free software 3D-Tool-Free can read and show stl file fast. It can recognize circles and measure the size of circle, knowing that there is triangle data in stl file. ##_Questions_
 How does FreeCAD render a VRML scene?
