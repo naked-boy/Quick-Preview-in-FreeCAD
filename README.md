@@ -14,5 +14,6 @@ However, programming with OpenGL is a very tedious thing. How to simplify and ge
 
 ##_Questions_
 In a VRML format file(.wrl) we can store data of pointset, lineset and triangle face set. We can also define our own node to store data of curve definition and surface definition. We don't define these nodes for rendering purpose, these nodes are used to tell what the lineset is or what the faceset is. This is quite helpful if we want to allow user to select geometry in the screen. For example, if user wants to select and measure a circle in the screen, it is impossible. Because the circle is composed of a set of lines. But if there is a node to tell that the lineset is a circle, then we can calculate the size of the circle by end points of lines.
+X3D is the next generation of VRML.
  
 
